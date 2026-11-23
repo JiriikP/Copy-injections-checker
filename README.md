@@ -4,11 +4,11 @@ Rozšíření do prohlížeče (Firefox / Chromium), které detekuje, vizuálně
 
 ## ✨ Hlavní funkce
 
-* **Detekce 9 kategorií skrývání textu:** Od základních CSS triků až po pokročilé obfuskace (3D rotace, překrytí v CSS Grid, sub-pixelová průhlednost nebo barvy téměř shodné s pozadím).
-* **Vizuální demaskování jedním kliknutím:** Nalezené skryté prvky natvrdo zviditelní přímo na stránce (červený text na žlutém pozadí), kde je lze kliknutím okamžitě smazat – nebo je nastaví k automatickému odstranění.
-* **Přehledný popup s navigací:** Zobrazuje seznam zachycených injekcí s barevnými odznáčky (`1`–`9`), popiskem konkrétní techniky a tlačítkem **`↗`** pro plynulé odskrolování přímo na daný prvek.
-* **Flexibilní správa webů:** Globální vypínač, přepínač pro konkrétní doménu i režim **allowlistu** (*Defaultně vypnout na nových stránkách*).
-* **Chytré filtrování:** Ignoruje prvky, které prohlížeč při výběru myší nebo `Ctrl+C` fyzicky nekopíruje (`display: none`, `visibility: hidden`, položky v `<select>`, zavřené `<details>` nebo `user-select: none`), čímž eliminuje falešné poplachy.
+- **Detekce 9 kategorií skrývání textu:** Od základních CSS triků až po pokročilé obfuskace (3D rotace, překrytí v CSS Grid, sub-pixelová průhlednost nebo barvy téměř shodné s pozadím).
+- **Vizuální demaskování jedním kliknutím:** Nalezené skryté prvky natvrdo zviditelní přímo na stránce (červený text na žlutém pozadí), kde je lze kliknutím okamžitě smazat – nebo je nastaví k automatickému odstranění.
+- **Přehledný popup s navigací:** Zobrazuje seznam zachycených injekcí s barevnými odznáčky (`1`–`9`), popiskem konkrétní techniky a tlačítkem **`↗`** pro plynulé odskrolování přímo na daný prvek.
+- **Flexibilní správa webů:** Globální vypínač, přepínač pro konkrétní doménu i režim **allowlistu** (*Defaultně vypnout na nových stránkách*).
+- **Chytré filtrování:** Ignoruje prvky, které prohlížeč při výběru myší nebo `Ctrl+C` fyzicky nekopíruje (`display: none`, `visibility: hidden`, položky v `<select>`, zavřené `<details>` nebo `user-select: none`), čímž eliminuje falešné poplachy.
 
 ## 🔍 Přehled detekovaných technik (Odznáčky 1–9)
 
@@ -27,17 +27,19 @@ Rozšíření do prohlížeče (Firefox / Chromium), které detekuje, vizuálně
 ## 🧪 Testovací stránka
 
 Součástí repozitáře je interaktivní testovací sada pokrývající všech 9 kategorií:
-* **Živá ukázka (GitHub Pages):** `https://jiriikp.github.io/copy-injections-checker/`
+- **Živá ukázka (GitHub Pages):** [JiriikP.github.io/Copy-injections-checker](https://JiriikP.github.io/Copy-injections-checker/)
 
-## 🚀 Instalace (Vývojářský režim)
+## 🚀 Instalace
 
-### Mozilla Firefox
-1. Stáhni nebo naklonuj tento repozitář.
-2. Otevři v prohlížeči adresu `about:debugging#/runtime/this-firefox`.
-3. Klikni na **Načíst dočasný doplněk…** (*Load Temporary Add-on…*).
-4. Vyber soubor `manifest.json` ze složky projektu.
+### Mozilla Firefox (ze souboru `.xpi`)
+1. Stáhni balíček rozšíření (`.xpi`) ze sekce **Releases** (nebo přímo z tohoto repozitáře).
+2. Otevři ve Firefoxu správce doplňků zadáním `about:addons` do adresního řádku (nebo stiskni `Ctrl + Shift + A`).
+3. Klikni na ikonu ozubeného kola (⚙️) v pravém horním rohu a vyber **Instalovat doplněk ze souboru…** (*Install Add-on From File…*).
+4. Vyber stažený soubor `.xpi` a potvrď instalaci.  
+*(Tip: Stažený soubor `.xpi` lze také jednoduše přetáhnout myší přímo do okna Firefoxu.)*
 
-### Google Chrome / Microsoft Edge / Brave
-1. Otevři v prohlížeči adresu `chrome://extensions/`.
-2. V pravém horním rohu zapni **Režim pro vývojáře** (*Developer mode*).
-3. Klikni na **Načíst rozbalené** (*Load unpacked*) a vyber složku s projektem.
+### Google Chrome / Microsoft Edge / Brave (z archivu `.zip`)
+1. Stáhni archiv rozšíření (`.zip`) ze sekce **Releases** a rozbal jej do libovolné složky.
+2. Otevři v prohlížeči stránku `chrome://extensions/`.
+3. V pravém horním rohu zapni **Režim pro vývojáře** (*Developer mode*).
+4. Klikni na **Načíst rozbalené** (*Load unpacked*) a vyber rozbalenou složku s rozšířením.
