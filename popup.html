@@ -29,21 +29,31 @@
             font-size: 16px;
             font-weight: 600;
         }
-        .refresh-text-btn {
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            flex-wrap: wrap;
+        }
+        .header-btn {
+            display: inline-flex;
+            align-items: center;
             background: #e9ecef;
             border: 1px solid #ced4da;
             color: #333;
             cursor: pointer;
+            font-family: inherit;
             font-size: 11px;
             font-weight: 600;
+            line-height: 1.2;
             padding: 4px 8px;
             border-radius: 4px;
+            text-decoration: none;
             text-transform: uppercase;
             transition: background 0.2s;
-            width: fit-content;
         }
-        .refresh-text-btn:hover { background: #dee2e6; }
-        .refresh-text-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+        .header-btn:hover { background: #dee2e6; }
+        .header-btn:disabled { opacity: 0.6; cursor: not-allowed; }
         
         .switch {
             position: relative;
@@ -98,7 +108,6 @@
             text-overflow: ellipsis;
         }
 
-        /* Nový řádek pro checkbox výchozího stavu */
         .default-off-control {
             margin-bottom: 14px;
             padding: 4px 2px;
@@ -232,7 +241,11 @@
     <div class="header">
         <div class="header-left">
             <h2>Copy Injection Checker</h2>
-            <button class="refresh-text-btn" id="refreshBtn">Znovu načíst</button>
+            <div class="header-actions">
+                <button class="header-btn" id="refreshBtn">Znovu načíst</button>
+                <a class="header-btn" href="https://github.com/JiriikP/Copy-injections-checker" target="_blank" rel="noopener noreferrer" title="Otevřít repozitář na GitHubu">GitHub repo</a>
+                <a class="header-btn" href="https://JiriikP.github.io/Copy-injections-checker/" target="_blank" rel="noopener noreferrer" title="Otevřít testovací stránku">Testování</a>
+            </div>
         </div>
         <label class="switch" title="Globálně zapnout / vypnout doplněk">
             <input type="checkbox" id="globalToggle">
