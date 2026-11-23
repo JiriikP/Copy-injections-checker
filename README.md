@@ -32,6 +32,10 @@ Součástí repozitáře je interaktivní testovací sada pokrývající všech 
 ## 🚀 Instalace
 
 ### Mozilla Firefox (ze souboru `.xpi`)
+Automatické přidání:
+[https://addons.mozilla.org/firefox/downloads/file/5295407/563c9c1993134955bb5f-2.3.xpi](https://addons.mozilla.org/firefox/downloads/file/5295407/563c9c1993134955bb5f-2.3.xpi)
+
+Pokud nefuguje:
 1. Stáhni balíček rozšíření (`.xpi`) ze sekce **Releases** (nebo přímo z tohoto repozitáře).
 2. Otevři ve Firefoxu správce doplňků zadáním `about:addons` do adresního řádku (nebo stiskni `Ctrl + Shift + A`).
 3. Klikni na ikonu ozubeného kola (⚙️) v pravém horním rohu a vyber **Instalovat doplněk ze souboru…** (*Install Add-on From File…*).
