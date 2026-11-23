@@ -10,24 +10,9 @@ Rozšíření do prohlížeče (Firefox / Chromium), které detekuje, vizuálně
 - **Flexibilní správa webů:** Globální vypínač, přepínač pro konkrétní doménu i režim **allowlistu** (*Defaultně vypnout na nových stránkách*).
 - **Chytré filtrování:** Ignoruje prvky, které prohlížeč při výběru myší nebo `Ctrl+C` fyzicky nekopíruje (`display: none`, `visibility: hidden`, položky v `<select>`, zavřené `<details>` nebo `user-select: none`), čímž eliminuje falešné poplachy.
 
-## 🔍 Přehled detekovaných technik (Odznáčky 1–9)
-
-| ID | Technika | Popis metody |
-| :-: | :--- | :--- |
-| **1** | **Záporný `z-index`** | Text je propadlý pod vrstvou pozadí (`z-index: -1`). |
-| **2** | **Odsunutí mimo obrazovku** | Extrémní `left`/`top`, `margin-left`, `text-indent: -9999px`, `translateX` nebo ořez rodičem s `overflow: hidden`. |
-| **3** | **Extrémní ořez** | Oříznutí vykreslované plochy pomocí `clip: rect(...)` nebo `clip-path`. |
-| **4** | **Splývání barev** | Shodná barva textu a pozadí (např. bílá na bílé) i téměř neviditelné rozdíly v RGB odstínu. |
-| **5** | **Transformace na nulu** | Zmenšení přes `transform: scale(0)` nebo otočení hranou k uživateli (`rotateY(90deg)`). |
-| **6** | **Průhlednost a filtry** | `opacity: 0`, hodnoty těsně nad nulou (`0.001`), nízký alfa kanál v `rgba()` nebo `filter: opacity(0)`. |
-| **7** | **Nulová velikost boxu** | Nastavení `width: 0` a `height: 0` v kombinaci s `overflow: hidden`. |
-| **8** | **Nulové / mikro písmo** | Velikost písma menší než `3px` (včetně `font-size: 0px`). |
-| **9** | **Překrytí jiným prvkem** | Zakrytí textu neprůhlednou vrstvou s vyšším `z-index` nebo vrstvením v `CSS Grid` (ověřováno raycastingem i kolizí sourozenců). |
-
 ## 🧪 Testovací stránka
 
-Součástí repozitáře je interaktivní testovací sada pokrývající všech 9 kategorií:
-- **Živá ukázka (GitHub Pages):** [JiriikP.github.io/Copy-injections-checker](https://JiriikP.github.io/Copy-injections-checker/)
+**Ukázka neviditelných textů (GitHub Pages):** [JiriikP.github.io/Copy-injections-checker](https://JiriikP.github.io/Copy-injections-checker/)
 
 ## 🚀 Instalace
 
@@ -43,3 +28,18 @@ Součástí repozitáře je interaktivní testovací sada pokrývající všech 
 2. Otevři v prohlížeči stránku `chrome://extensions/`.
 3. V pravém horním rohu zapni **Režim pro vývojáře** (*Developer mode*).
 4. Klikni na **Načíst rozbalené** (*Load unpacked*) a vyber rozbalenou složku s rozšířením.
+
+
+## 🔍 Přehled detekovaných technik (Odznáčky 1–9)
+
+| ID | Technika | Popis metody |
+| :-: | :--- | :--- |
+| **1** | **Záporný `z-index`** | Text je propadlý pod vrstvou pozadí (`z-index: -1`). |
+| **2** | **Odsunutí mimo obrazovku** | Extrémní `left`/`top`, `margin-left`, `text-indent: -9999px`, `translateX` nebo ořez rodičem s `overflow: hidden`. |
+| **3** | **Extrémní ořez** | Oříznutí vykreslované plochy pomocí `clip: rect(...)` nebo `clip-path`. |
+| **4** | **Splývání barev** | Shodná barva textu a pozadí (např. bílá na bílé) i téměř neviditelné rozdíly v RGB odstínu. |
+| **5** | **Transformace na nulu** | Zmenšení přes `transform: scale(0)` nebo otočení hranou k uživateli (`rotateY(90deg)`). |
+| **6** | **Průhlednost a filtry** | `opacity: 0`, hodnoty těsně nad nulou (`0.001`), nízký alfa kanál v `rgba()` nebo `filter: opacity(0)`. |
+| **7** | **Nulová velikost boxu** | Nastavení `width: 0` a `height: 0` v kombinaci s `overflow: hidden`. |
+| **8** | **Nulové / mikro písmo** | Velikost písma menší než `3px` (včetně `font-size: 0px`). |
+| **9** | **Překrytí jiným prvkem** | Zakrytí textu neprůhlednou vrstvou s vyšším `z-index` nebo vrstvením v `CSS Grid` (ověřováno raycastingem i kolizí sourozenců). |
